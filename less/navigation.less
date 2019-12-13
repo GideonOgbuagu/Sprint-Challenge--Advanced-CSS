@@ -1,1 +1,102 @@
 // Navigation code here
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+
+    nav {
+        max-width: 800px;
+        margin: 0 auto;
+       .navStyle();   // Nav Mixins here
+       
+       @media @phone {
+        width: 100%;
+    }
+
+        h1 {
+            font-size: 4.3rem;
+        }
+        .links-cont{
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 2.5%;
+
+            @media @phone {
+                width: 75%;
+                padding-top: 4%;
+                padding-bottom: 1.1%;
+            }            
+            a {
+                .linkStyle();
+            }
+        }
+    }
+    
+    
+   
+} // nav-container ends here
+
+
+
+    // max-width: 1000px;
+    // margin: 0 auto;
+    // border-bottom: @border; 
+
+    // nav {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     max-width: 800px;
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     box-sizing: border-box;
+
+    //     div {
+    //         margin-top: 5%;
+    //         padding-bottom: 3%; 
+    //     }
+        
+    //     div:first-child {
+    //         width: 30%;
+    //     } // nav first child div ends here
+    //     div:nth-child(2) {
+    //         width: 50%;
+    //         display: flex;
+    //         justify-content: space-evenly;
+    //         align-items: center;
+
+    //         a {
+    //            text-decoration: none;
+    //            color: black;
+    //            font-size: 1.6rem; 
+    //         }
+    //     }
+
+    //     @media @mobile {
+    //             margin-top: 5%;
+    //             div {
+    //                 margin-top: 0;
+    //             }
+
+    //             div:first-child{
+    //                 display: flex;
+    //                 justify-content: center;
+    //                 width: 100%;
+    //                 h1 {
+    //                     font-size: 3rem;
+    //                     // font-weight: bold;
+    //                 }
+    //             }
+    //             div:nth-child(2){
+    //                 width: 100%;
+    //                 display: flex;
+    //                 justify-content: space-evenly;
+    //                 padding-bottom: 2%;
+                    
+    //             }
+    //         width: 100%;
+    //         display: flex;
+    //         flex-direction: column;
+    //     }
+    // } // nav ends here

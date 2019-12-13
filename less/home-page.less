@@ -4,6 +4,11 @@
 
   .intro {
 
+    img {
+      border-radius: 5px;
+      max-width: 100%;
+    }
+
     h2 {
       padding: 15px;
     }
@@ -24,6 +29,16 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @phone {
+      :nth-child(2), :nth-child(3) {
+        display: none;
+      }
+      :first-child {
+        width: 100%;
+        max-width: 100%;
+      }
     }
   }
 
@@ -46,8 +61,24 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      padding-right: 3%;
+      padding-left: 3%;
+      
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,18 +89,46 @@
       }
 
       .btn {
+       .signUp(@ebony-clay, white); // Button Mixins with Parameters here
+
+       &:hover {
+        .signUp(white, @ebony-clay);
+        // border: 1px solid @ebony-clay;
+       }
+
+        @media @phone {
+          .signUp(@ebony-clay, white); // Button Mixins with Parameters here
+          width: 100%;
+          &:hover {
+           .signUp(white, @ebony-clay);
+           width: 100%;
+           // border: 1px solid @ebony-clay;
+          }
+        }
+
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+
+        @media @phone {
+          width: 100%;
+          max-width: 100%;
+        }
       }
+    
     }
   }
 }// home
