@@ -93,10 +93,11 @@
 
       .btn {
        .signUp(@ebony-clay, white); // Button Mixins with Parameters here
+        border: 1px solid @ebony-clay;
 
        &:hover {
         .signUp(white, @ebony-clay);
-        // border: 1px solid @ebony-clay;
+        
        }
 
         @media @phone {
@@ -105,7 +106,8 @@
           &:hover {
            .signUp(white, @ebony-clay);
            width: 100%;
-          //  border: 1px solid @ebony-clay;
+           border: 1px solid @ebony-clay;
+           margin: 0;
           }
         }
 
